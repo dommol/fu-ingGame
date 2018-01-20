@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://images/titlescreen.png" type="Texture" id=1]
+[ext_resource path="res://scripts/startButtons.gd" type="Script" id=2]
+
+[node name="TextureFrame" type="TextureFrame"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = 0.0
+margin/right = 1025.0
+margin/bottom = 600.0
+texture = ExtResource( 1 )
+stretch_mode = 0
+
+[node name="VButtonArray" type="VButtonArray" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 278.0
+margin/top = 177.0
+margin/right = 555.0
+margin/bottom = 453.0
+flat = false
+button/count = 3
+button/min_button_size = 0.0
+button/align = 4
+button/0/text = "Start Game"
+button/0/tooltip = ""
+button/0/icon = null
+button/1/text = "Something Else"
+button/1/tooltip = ""
+button/1/icon = null
+button/2/text = "Another!"
+button/2/tooltip = ""
+button/2/icon = null
+button/selected = 0
+script/script = ExtResource( 2 )
+
+[connection signal="button_selected" from="VButtonArray" to="VButtonArray" method="_on_VButtonArray_button_selected"]
+
+
